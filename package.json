@@ -1,0 +1,37 @@
+{
+  "name": "uhooks-nofx",
+  "version": "0.0.0",
+  "description": "Hooks without any side-effect",
+  "main": "./cjs/index.js",
+  "scripts": {
+    "build": "npm run cjs",
+    "cjs": "ascjs esm cjs"
+  },
+  "keywords": [
+    "hooks",
+    "mock",
+    "stub"
+  ],
+  "author": "Andrea Giammarchi",
+  "license": "ISC",
+  "devDependencies": {
+    "ascjs": "^4.0.3"
+  },
+  "module": "./esm/index.js",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./esm/index.js",
+      "default": "./cjs/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WebReflection/uhooks-nofx.git"
+  },
+  "bugs": {
+    "url": "https://github.com/WebReflection/uhooks-nofx/issues"
+  },
+  "homepage": "https://github.com/WebReflection/uhooks-nofx#readme"
+}
