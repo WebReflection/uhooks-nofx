@@ -5,9 +5,6 @@ exports.dropEffect = dropEffect;
 const hasEffect = () => false;
 exports.hasEffect = hasEffect;
 
-const isFunction = f => typeof f === 'function';
-exports.isFunction = isFunction;
-
 const hooked = callback => function () {
   return callback.apply(this, arguments);
 };

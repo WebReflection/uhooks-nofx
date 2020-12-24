@@ -1,10 +1,8 @@
 'use strict';
-const {isFunction} = require('./hooks.js');
-
-const getValue = (value, f) => isFunction(f) ? f(value) : f;
+const getValue = (value, f) => typeof f === 'function' ? f(value) : f;
 
 const useReducer = (reducer, value, init) => [
-  isFunction(init) ? init(value) : getValue(void 0, value),
+  typeof init === 'function' ? init(value) : getValue(void 0, value),
   newValue => {
     value = reducer(value, newValue);
   }

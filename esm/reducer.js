@@ -1,9 +1,7 @@
-import {isFunction} from './hooks.js';
-
-const getValue = (value, f) => isFunction(f) ? f(value) : f;
+const getValue = (value, f) => typeof f === 'function' ? f(value) : f;
 
 export const useReducer = (reducer, value, init) => [
-  isFunction(init) ? init(value) : getValue(void 0, value),
+  typeof init === 'function' ? init(value) : getValue(void 0, value),
   newValue => {
     value = reducer(value, newValue);
   }
