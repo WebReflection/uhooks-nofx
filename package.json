@@ -1,6 +1,6 @@
 {
   "name": "uhooks-nofx",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Hooks without any side-effect",
   "main": "./cjs/index.js",
   "scripts": {
