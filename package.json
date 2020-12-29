@@ -24,6 +24,10 @@
       "import": "./esm/index.js",
       "default": "./cjs/index.js"
     },
+    "./async": {
+      "import": "./esm/async.js",
+      "default": "./cjs/async.js"
+    },
     "./package.json": "./package.json"
   },
   "repository": {
